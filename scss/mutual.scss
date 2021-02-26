@@ -1,0 +1,174 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-weight: normal;
+  outline: none;
+}
+a {
+  color: #000;
+}
+html {
+  font-size: 10px;
+  color: #000;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  &.stop-scroll {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.logo__title {
+  color: $main-color;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+.call-us {
+  display: flex;
+  align-items: center;
+  .call-us__icon {
+    width: 20px;
+    height: 20px;
+    background: center / contain no-repeat url('../images/phone-call.svg');
+    margin-right: 10px;
+  }
+  a {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+}
+.write-us{
+  display: flex;
+  align-items: center;
+  .write-us__icon {
+    width: 20px;
+    height: 20px;
+    background: center / contain no-repeat url('../images/email.svg');
+    margin-right: 10px;
+  }
+  a {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+}
+
+.main-button {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #3a4bf1;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  @media (max-width: 540px) {
+    font-size: 1.8rem;
+  }
+}
+.main-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  grid-template-rows: auto;
+}
+.main-control {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  color: #333;
+  box-shadow: 0 0 1px 0 rgba(0,0,0, 0.5);
+}
+.sub-button {
+  display: inline-block;
+  border: none;
+  background: rgba(238, 238, 238, 0.9);
+  color: #111;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.underlined {
+  text-decoration: underline;
+}
+.main-link {
+  color: $main-color;
+  text-decoration: underline;
+}
+.social-list {
+  li {
+    background: center / contain no-repeat;
+    cursor: pointer;
+    a {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .facebook {
+    background-image: url('../images/facebook.svg');
+  }
+  .instagram {
+    background-image: url('../images/instagram.svg');
+  }
+  .telegram {
+    background-image: url('../images/telegram.svg');
+  }
+  .whatsapp {
+    background-image: url('../images/whatsapp.svg');
+  }
+  .smartphone {
+    background-image: url('../images/smartphone.svg');
+  }
+}
+.slick-track {
+  display: flex;
+}
+.slick-arrow {
+  display: block;
+  position: absolute;
+  z-index: 4;
+  width: 35px;
+  height: 35px;
+  background: center / 25px 25px no-repeat url('../images/arrow.svg');
+  right: -5px;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .4s ease;
+  &.slick-disabled {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+  }
+  &.prevButton {
+    left: -5px;
+    transform: rotate(180deg);
+  }
+}
